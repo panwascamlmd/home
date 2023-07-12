@@ -1,16 +1,22 @@
+<!DOCTYPE html>
 <html>
-
- <title>by mamad</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<head>
+<title>by_panwascamlmd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  min-height: 100vh;
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #cfa646;
+  background-color: #8589cf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
 }
 
 .topnav a {
@@ -18,9 +24,9 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 5px 8px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 .topnav a:hover {
@@ -29,7 +35,6 @@ body {
 }
 
 .topnav a.active {
-  background-color: #e62129;
   color: white;
 }
 
@@ -59,61 +64,124 @@ body {
   }
 }
 
+.tab-content {
+  display: none;
+  padding: 10px;
 
-	
-	
-		body{background-size:100% 100%;background-image:url(
-			https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiikYzobZ4A_wPdSOM7Xw6U8MGv-ddNTk1DRQ5yyMPavrdniVS6HYpsf9Ehg3DUZZRPidmFxwn7jLVi9GQmVA_S-XyhH0uvKQTP5-WrBBSat5JjKkCRUDvCH_-pOzpRpRTTxolficwxjR_vOxLz_5_xV_6RBQ-92DFtSrRY31pvJLAjF9mEHUmZtXQJhKTP/s16000/BG%20DIDING.jpg
-			);}
+}
 
+/* Floating Back-to-Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+}
 
-	</style>
+#back-to-top i {
+  font-size: 24px;
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
 
-<head>
+#back-to-top i:hover {
+  background-color: #555;
+}
+
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+	  background-color: #926fc1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+	  color: #f2f2f2;
+	  font-size: 16px;
+      padding: 1px;
+    }
+
+</style>
+</head>
+<body>
+
 <div class="topnav" id="myTopnav">
-  
-<a href="https://panwascamleuwimunding.blogspot.com/" class="active">Home</a>
-  
-<a href="https://panwascamleuwimunding.blogspot.com/p/coming-soon.html">Pengawasan</a>
-
-<a href="https://panwascamleuwimunding.blogspot.com/p/tahapan-pemilu-serentak-2024.html">Tahapan Pemilu</a>
-  
-<a href="http://www.panwascamlmd.info/2023/02/laporan-akhir-pembentukan-panwaslu.html">Rekruitment PKD</a>
-    
-<a href="https://cekdptonline.kpu.go.id/">Cek DPT</a>
-
-
-
+  <a href="#home" class="active" onclick="openTab('home')"><img src="
+  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1f344tffA1suha8gYMqdg1Jg7TnnDteImIjiJevO68Ha066HGCreuPPoNfnuBT7ckABqYTL_tLFnxZvMX2YRNqi3sAZDrQJghjnMQ-IByKb59Q4R6wfO69qaMEXCTQISF6qCW1qjfqJYjUKSx0gGHXy6yKi9vk1eIbeXn30yikoNzrC_EWgHNxaAKww/w200-h42/logoweb.png
+  " alt="Logo" style="width: 15vh; height: 3vh;"></a>
+  <a href="#absen" onclick="openTab('absen')"><i class="fa fa-calendar-check-o" style="font-size:25px;"></i> Absen Patroli</a>
+  <a href="#sppd" onclick="openTab('sppd')"><i class="fa fa-money" style="font-size:25px;"></i> SPPD</a>
+  <a href="#lhp" onclick="openTab('lhp')"><i class="fa fa-pencil-square-o" style="font-size:25px;"></i> LHP</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
-<div style="padding-left:16px">
-  <!-- <h2> tulisane </h2> -->
-
-</div>
-
-
-    <h1>
+	<p>
 	<marquee bgcolor="" width="100%" scrollamount="5">
 	“Selamat datang di website Panwaslu Kecamatan Leuwimunding"
-	</marquee>		
-	</h1>
-</head>
-	
+	</marquee>
+	</p>
+<div id="home" class="tab-content">
+  <h2>HOME</h2>
+  <p>Content for Home tab goes here.</p>
+</div>
 
-<body>
+<div id="absen" class="tab-content">
+  <h2>ABSEN PATROLI</h2>
+  <p>Content for ABSEN PATROLI tab goes here.</p>
+  <iframe frameborder="0" width="99.5%" height="700px" marginheight="0" marginwidth="0" src="
+  https://script.google.com/macros/s/AKfycbzQ1jfpA2tWbJwGmEcEEbICauE5kiDrJnr8QyWBfpVPgzj8g1lqL_slCrSjm1waT_YJKA/exec">
+  </iframe> 
+
+ <p> 
+Dalam 
+contoh mlm
+di atas, kami 
+menambahkan CSS 
+untuk elemen dengan 
+ID "back-to-top" yang 
+menjadikannya melayang 
+di sudut kanan bawah halaman. 
+Kemudian, dengan JavaScript, kami 
+menampilkan tombol kembali ke atas saat 
+pengguna melakukan scroll ke bawah, dan mengatur 
+fungsi scroll ke atas ketika tombol tersebut diklik.
 
 
-<iframe src="
-	https://script.google.com/macros/s/AKfycbwGf6-KIe9u2Bsvh1zPW6N1cvX1HBA0TJNwA0xeLptW90g1jVIXu4yZY9fgDl0df13PXA/exec
-	" width="700" height="1000" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+</p>
+  
+  
+  
+  
+</div>
 
-		
-</body>
+<div id="sppd" class="tab-content">
+  <h2>SPPD</h2>
+<iframe jsname="L5Fo6c" jscontroller="usmiIb" jsaction="rcuQ6b:WYd;" class="YMEQtf DnR2hf L6cTce-purZT L6cTce-pSzOP KfXz0b" 
+sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals" 
+frameborder="0" aria-label="Spreadsheet, LAPORAN PELAKSANAAN PERINTAH TUGAS (Jawaban)" style="width: 99.5%; height: 60vh" allowfullscreen="" 
+src="https://docs.google.com/spreadsheets/d/1tH61Ku5KKlNE9BSgpyRybkL_-MR4LetW9RYsiTdau5k/htmlembed?authuser=0">
+</iframe>
+</div>
 
+<div id="lhp" class="tab-content">
+  <h2>LHP PANWASCAM LEUWIMUNDING</h2>
+  <p>Content for lhp tab goes here.</p>
+</div>
 
+<!-- Back-to-Top Button -->
+<div id="back-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -123,10 +191,42 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+function openTab(tabName) {
+  var tabContents = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+
+// Show Back-to-Top Button when scrolling
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("back-to-top").style.display = "block";
+  } else {
+    document.getElementById("back-to-top").style.display = "none";
+  }
+}
+
+// Scroll to top when Back-to-Top Button is clicked
+document.getElementById("back-to-top").onclick = function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
 </script>
-	
+<script>
+window.onload = function() {
+  document.getElementById("home").style.display = "block";
+};
+</script>
+</body>
+     <footer>
+    <p>Website official Panwascamlmd.html | Creator By Mamad</p>
+	 </footer>
 </html>
-
-
-
-
