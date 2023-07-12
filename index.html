@@ -6,11 +6,63 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-  min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+
+/* login.css */
+  .container {
+	display: block;
+    background-color: #20212400;
+    text-align: center;
+    padding: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+  }
+
+  
+  h2 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+	width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
 
 .topnav {
   overflow: hidden;
@@ -110,8 +162,6 @@ body {
       padding: 1px;
     }
 
-</style>
-<style>
 
 
 /* The Modal (background) */
@@ -119,7 +169,7 @@ body {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 10px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -132,10 +182,28 @@ body {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 85%;
 }
+    /* Styles for the button */
+    #myBtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #myBtn:hover {
+      background-color: #45a049;
+    }
+
+    #myBtn:focus {
+      outline: none;
+    }
+    
 
 /* The Close Button */
 .close {
@@ -151,34 +219,57 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
 </style>
 </head>
 <body>
 
+<div id="loginSection" class="container">
+
+  <form id="loginForm">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgT0Z2463y5GOtRv4p1TLaZBwe1nVJdGkjTiLwz7ljum47mb9XK5fKlk4bcBNTvOTzwxbLPpq2K_0MiKCN6t84RwBewvhtw5H8M6OIS45sxH0WGeQIGIDTphQBlFtjKGZxrVzqv4dnYOgM-joluOFPeNNPxeVTP9xVeA2-UDP88-jIeGlO-uVBmq88MQ/s1600/icon.png
+  " alt="Logo" style="width: 100px; height: 100px;">
+  <h2>Admin Login</h2>
+  <br><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="admin" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="admin" required>
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<div id="contentSection" class="hidden">
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active" onclick="openTab('home')"><img src="
   https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1f344tffA1suha8gYMqdg1Jg7TnnDteImIjiJevO68Ha066HGCreuPPoNfnuBT7ckABqYTL_tLFnxZvMX2YRNqi3sAZDrQJghjnMQ-IByKb59Q4R6wfO69qaMEXCTQISF6qCW1qjfqJYjUKSx0gGHXy6yKi9vk1eIbeXn30yikoNzrC_EWgHNxaAKww/w200-h42/logoweb.png
-  " alt="Logo" style="width: 15vh; height: 3vh;"></a>
+  " alt="Logo" style="width: 18vh; height: 4vh;"></a>
   <a href="#absen" onclick="openTab('absen')"><i class="fa fa-calendar-check-o" style="font-size:25px;"></i> Absen Patroli</a>
   <a href="#sppd" onclick="openTab('sppd')"><i class="fa fa-money" style="font-size:25px;"></i> SPPD</a>
   <a href="#lhp" onclick="openTab('lhp')"><i class="fa fa-pencil-square-o" style="font-size:25px;"></i> LHP</a>
+    <a href="javascript:void(0);" id="logoutButton"><i class="fa fa-sign-out" style="font-size:25px;"></i>Logout</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
+    <i class="fa fa-bars"style="font-size:35px;"></i> 
   </a>
 </div>
-	<p>
+   <p style="margin: 6px;">
 	<marquee bgcolor="" width="100%" scrollamount="5">
 	“Selamat datang di website Panwaslu Kecamatan Leuwimunding"
 	</marquee>
 	</p>
 <div id="home" class="tab-content">
-  <h2>HOME</h2>
+  <h2>Ayo Awasi Bersama</h2>
+   <h2><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi_Sogwyv7Rp43DXCn5JGcIBsLqWAykL8_fl-eVvS-U5KBqc-joHO3rK-tGmjWd1hAeLnJIQwsCNYIqUyjSGflfqDK5SsQ46fp5Xe1d_b8QLRJLHLcqF3FHMhPxDxlWoJtEHVOQniWpyCP4JzjxXJyk4ocVHawTRf9mNjPRgwcb32WSXiu3LzujxfXJg/w200-h167/icon-Bawaslu.png
+  " alt="Foto" style="
+	text-align: center;
+	<!-- border-radius: 50%; *untuk bingkai bulat-->
+	"> </h2>
   <p>Content for Home tab goes here.</p>
 </div>
 
 <div id="absen" class="tab-content">
   <h2>ABSEN PATROLI</h2>
-  <p>Content for ABSEN PATROLI tab goes here.</p>
+	<p>ini adalah halaman laporan absen hasil harian partoli pengawasan</p>
  <p> 
 Dalam 
 contoh mlm
@@ -203,7 +294,8 @@ fungsi scroll ke atas ketika tombol tersebut diklik.
 
 <div id="sppd" class="tab-content">
   <h2>SPPD</h2>
-  <button id="myBtn">Open Modal</button>
+  <p>ini adalah halaman laporan sppd</p>
+  <button id="myBtn">Form SPPD</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -211,13 +303,13 @@ fungsi scroll ke atas ketika tombol tersebut diklik.
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-      <iframe frameborder="0" width="99.5%" height="700px" marginheight="0" marginwidth="0" src="
-  https://script.google.com/macros/s/AKfycbzQ1jfpA2tWbJwGmEcEEbICauE5kiDrJnr8QyWBfpVPgzj8g1lqL_slCrSjm1waT_YJKA/exec">
+      <iframe frameborder="0" width="99.5%" height="900px" src="
+  file:///E:/BELAJAR%20HTML/Jadi%20index%20untuk%20google%20sheet.html">
   </iframe> 
   </div>
 
 </div>
-  
+
   <br></br>
 <iframe jsname="L5Fo6c" jscontroller="usmiIb" jsaction="rcuQ6b:WYd;" class="YMEQtf DnR2hf L6cTce-purZT L6cTce-pSzOP KfXz0b" 
 sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals" 
@@ -228,14 +320,23 @@ src="https://docs.google.com/spreadsheets/d/1tH61Ku5KKlNE9BSgpyRybkL_-MR4LetW9RY
 
 <div id="lhp" class="tab-content">
   <h2>LHP PANWASCAM LEUWIMUNDING</h2>
-  <p>Content for lhp tab goes here.</p>
+  <p>ini adalah halaman laporan hasil pengawasan</p>
 </div>
 
 <!-- Back-to-Top Button -->
 <div id="back-to-top">
   <i class="fa fa-arrow-up"></i>
 </div>
+</div>
+
+</body>
+     <footer>
+    <p>Website official Panwascamlmd | Creator By Mamad</p>
+	 </footer>
+
 <script>
+
+// -----------------------menu------------------------------------------------------------
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -245,6 +346,10 @@ function myFunction() {
   }
 }
 
+// ------------------------klik menu-----------------------------------------------------------
+window.onload = function() {
+  document.getElementById("home").style.display = "block";
+};
 function openTab(tabName) {
   var tabContents = document.getElementsByClassName("tab-content");
   for (var i = 0; i < tabContents.length; i++) {
@@ -253,11 +358,11 @@ function openTab(tabName) {
   document.getElementById(tabName).style.display = "block";
 }
 
+// -------------------------------kembali keatas----------------------------------------------------
 // Show Back-to-Top Button when scrolling
 window.onscroll = function() {
   scrollFunction();
 };
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("back-to-top").style.display = "block";
@@ -265,12 +370,13 @@ function scrollFunction() {
     document.getElementById("back-to-top").style.display = "none";
   }
 }
-
 // Scroll to top when Back-to-Top Button is clicked
 document.getElementById("back-to-top").onclick = function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
+
+// ---------------------------klik form--------------------------------------------------------
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -295,15 +401,65 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
+
 </script>
 <script>
-window.onload = function() {
-  document.getElementById("home").style.display = "block";
-};
+document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('loginForm');
+  const loginSection = document.getElementById('loginSection');
+  const contentSection = document.getElementById('contentSection');
+
+  const logoutButton = document.getElementById('logoutButton');
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simulate authentication check
+    if (username === 'admin' && password === 'admin') {
+      alert('Login successful!');
+      localStorage.setItem('isLoggedIn', 'true');
+      showContentSection();
+    } else {
+      alert('Login failed! Please check your username and password.');
+    }
+  });
+
+  function showContentSection() {
+    loginSection.classList.add('hidden');
+    contentSection.classList.remove('hidden');
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      showMenu();
+    }
+  }
+
+  function showMenu() {
+    contentSection.classList.remove('hidden');
+  }
+
+
+  function logout() {
+    alert('Logout successful!');
+    localStorage.setItem('isLoggedIn', 'false');
+    loginSection.classList.remove('hidden');
+    contentSection.classList.add('hidden');
+    loginForm.reset();
+  }
+
+  // Add event listener for logout button
+  logoutButton.addEventListener('click', logout);
+
+  // Initial state
+  if (localStorage.getItem('isLoggedIn') === 'true') {
+    showContentSection();
+  }
+});
+
+
 </script>
-</body>
-     <footer>
-    <p>Website official Panwascamlmd.html | Creator By Mamad</p>
-	 </footer>
+
+
 </html>
